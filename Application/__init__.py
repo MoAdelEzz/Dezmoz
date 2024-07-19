@@ -1,12 +1,37 @@
 import sys
 
 from PySide6.QtWidgets import QMessageBox
+from PySide6.QtGui import QIcon
 from matplotlib.figure import Figure
 
 from Backend.Server import Server
 from UI.ui import *
 from Validators.FunctionValidator import FunctionValidator
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
+
+class CustomToolbar(NavigationToolbar):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.set_button_icons()
+    
+    def set_button_icons(self):
+        # Modify the icons for each button
+        for action in self.actions():
+            icon = action.icon()
+            pixmap = icon.pixmap(16, 16)
+            colored_pixmap = self.color_pixmap(pixmap, Qt.red)  # Change color here
+            action.setIcon(QIcon(colored_pixmap))
+
+    def color_pixmap(self, pixmap, color):
+        # Convert pixmap to QImage
+        image = pixmap.toImage()
+        # Apply color filter
+        for x in range(image.width()):
+            for y in range(image.height()):
+                if image.pixelColor(x, y).alpha() > 0:  # Apply color only to non-transparent pixels
+                    image.setPixelColor(x, y, color)
+        return QPixmap.fromImage(image)
+
 
 class MainWindow(QMainWindow):
     def __showMessage__(self, message):
@@ -76,6 +101,7 @@ class MainWindow(QMainWindow):
         height = 492
         # setting  the fixed size of window
         self.setFixedSize(width, height)
+        
 
         self.toolbar = None
         self.canvas = None
@@ -85,6 +111,8 @@ class MainWindow(QMainWindow):
 
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.setWindowTitle("Dezmoz")
+        self.setWindowIcon(QIcon("./UI/rsc/icon.png"))
 
         self.createPlotCanvas([],[])
         self.invokeListeners()
@@ -115,7 +143,8 @@ class MainWindow(QMainWindow):
         self.ax.title.set_color('white')
 
         self.canvas = FigureCanvasQTAgg(fig)
-        self.toolbar = NavigationToolbar(self.canvas, self)
+        self.toolbar = CustomToolbar(self.canvas, self)
+        self.toolbar
         self.ui.plotArea.addWidget(self.toolbar)
         self.ui.plotArea.addWidget(self.canvas)
 

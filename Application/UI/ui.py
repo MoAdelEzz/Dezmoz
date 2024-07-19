@@ -50,12 +50,13 @@ class Ui_MainWindow(object):
         self.functionInput.setObjectName(u"functionInput")
         self.functionInput.setMinimumSize(QSize(434, 30))
         self.functionInput.setStyleSheet(u"background-color: #0f0f0f;\n"
+"color: white;\n"
 "border-width: 2px;\n"
 "\n"
 "border-style: outset;\n"
 "border-radius: 10px;\n"
 "border-color: red")
-        self.functionInput.setMaxLength(20)
+        self.functionInput.setMaxLength(64)
         self.functionInput.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.functionInput.setReadOnly(False)
 
@@ -80,7 +81,7 @@ class Ui_MainWindow(object):
 "border-top: none;\n"
 "border-left:none;\n"
 "border-right:none;\n"
-"\n"
+"color:white;\n"
 "border-width: 2px;\n"
 "border-style: outset")
         self.xMinInput.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -101,7 +102,7 @@ class Ui_MainWindow(object):
 "border-top: none;\n"
 "border-left:none;\n"
 "border-right:none;\n"
-"\n"
+"color:white;\n"
 "border-width: 2px;\n"
 "border-style: outset")
         self.xMaxInput.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -115,6 +116,7 @@ class Ui_MainWindow(object):
         self.plotButton = QPushButton(self.groupBox)
         self.plotButton.setObjectName(u"plotButton")
         self.plotButton.setMinimumSize(QSize(87, 0))
+        self.plotButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.plotButton.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 255, 100, 255), stop:1 rgba(255, 0, 0, 255));\n"
 "\n"
 "border-color:red;\n"
@@ -157,9 +159,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.groupBox.setTitle("")
-        self.functionInput.setText("")
+        self.functionInput.setText(QCoreApplication.translate("MainWindow", u"X^2 * sqrt(X)", None))
         self.functionInput.setPlaceholderText(QCoreApplication.translate("MainWindow", u"f(x)", None))
+        self.xMinInput.setText(QCoreApplication.translate("MainWindow", u"-20", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>&lt; X &lt;</p></body></html>", None))
+        self.xMaxInput.setText(QCoreApplication.translate("MainWindow", u"20", None))
         self.plotButton.setText(QCoreApplication.translate("MainWindow", u"Plot", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Dezmoz</p></body></html>", None))
     # retranslateUi
