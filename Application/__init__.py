@@ -71,6 +71,12 @@ class MainWindow(QMainWindow):
 
     def __init__(self):
         super(MainWindow, self).__init__()
+
+        width = 605
+        height = 492
+        # setting  the fixed size of window
+        self.setFixedSize(width, height)
+
         self.toolbar = None
         self.canvas = None
         self.ax = None

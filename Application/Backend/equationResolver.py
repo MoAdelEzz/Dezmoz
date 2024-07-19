@@ -3,8 +3,11 @@ from Backend.stringUtils import formatNumber, findFirstOccurence, findLastOccure
 
 
 class LogarithmicError(Exception):
-    """Custom exception class for specific error conditions."""
+    def __init__(self, message):
+        self.message = message
+        super().__init__(self.message)
 
+class RootError(Exception):
     def __init__(self, message):
         self.message = message
         super().__init__(self.message)
@@ -119,7 +122,7 @@ class EquationResolver:
         internalEquation = self.__rootsEquations__[operand]
         resolvedEquation = tokenizedStringToFloat(self.__resolveBrackets__(internalEquation)[3: -1])
         if resolvedEquation < 0:
-            raise Exception("Square Root Of Negative Value")
+            raise RootError("Square Root Of Negative Value")
         result = math.sqrt(resolvedEquation)
         resultString = formatNumber(result)
         return f"DG;{resultString};"

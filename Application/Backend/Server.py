@@ -1,4 +1,4 @@
-from Backend.equationResolver import EquationResolver, LogarithmicError
+from Backend.equationResolver import EquationResolver, LogarithmicError, RootError
 from Backend.stringUtils import tokenizedStringToFloat
 from Backend.tokenizer import Tokenizer
 import matplotlib.pyplot as plt
@@ -40,6 +40,8 @@ class Server:
             except ZeroDivisionError:
                 pass
             except LogarithmicError:
+                pass
+            except RootError:
                 pass
             x_min += stepSize
         return xList, yList

@@ -8,6 +8,7 @@ Function Plotter Using PySide6 - Matplotlib libraries
     - \-
     - \*
     - \\
+    - \^
     - log10( f(x) )
     - sqrt(f(x))
     - (f(x)) operator (g(x))
