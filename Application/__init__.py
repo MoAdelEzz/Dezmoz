@@ -3,9 +3,9 @@ import sys
 from PySide6.QtWidgets import QMessageBox
 from matplotlib.figure import Figure
 
-from Application.Backend.Server import Server
-from Application.UI.ui import *
-from Application.Validators.FunctionValidator import FunctionValidator
+from Backend.Server import Server
+from UI.ui import *
+from Validators.FunctionValidator import FunctionValidator
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
 
 class MainWindow(QMainWindow):

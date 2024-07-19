@@ -1,5 +1,5 @@
 import math
-from Application.Backend.stringUtils import formatNumber, findFirstOccurence, findLastOccurence, tokenizedStringToFloat
+from Backend.stringUtils import formatNumber, findFirstOccurence, findLastOccurence, tokenizedStringToFloat
 
 
 class LogarithmicError(Exception):

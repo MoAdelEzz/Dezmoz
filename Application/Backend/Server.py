@@ -1,8 +1,7 @@
-from Application.Backend.equationResolver import EquationResolver, LogarithmicError
-from Application.Backend.stringUtils import tokenizedStringToFloat
-from Application.Backend.tokenizer import Tokenizer
+from Backend.equationResolver import EquationResolver, LogarithmicError
+from Backend.stringUtils import tokenizedStringToFloat
+from Backend.tokenizer import Tokenizer
 import matplotlib.pyplot as plt
-from mpl_interactions import interactive_plot
 
 
 

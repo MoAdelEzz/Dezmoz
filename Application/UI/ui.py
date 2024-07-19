@@ -30,8 +30,6 @@ class Ui_MainWindow(object):
         self.widget.setObjectName(u"widget")
         self.widget.setGeometry(QRect(0, 0, 641, 501))
         self.widget.setStyleSheet(u"background-color:black;\n"
-"display:flex;\n"
-"flex-direction: column;\n"
 "")
         self.widget565 = QWidget(self.widget)
         self.widget565.setObjectName(u"widget565")

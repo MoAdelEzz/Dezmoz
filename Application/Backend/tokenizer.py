@@ -1,7 +1,7 @@
 import re
 
-from Application.Backend.equationResolver import EquationResolver
-from Application.Backend.stringUtils import findFirstOccurence, addMissingOperations
+from Backend.equationResolver import EquationResolver
+from Backend.stringUtils import findFirstOccurence, addMissingOperations
 
 
 class Tokenizer:
