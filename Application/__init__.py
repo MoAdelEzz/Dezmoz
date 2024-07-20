@@ -66,8 +66,8 @@ class MainWindow(QMainWindow):
         xMin = float(xMin)
         xMax = float(xMax)
 
-        if xMin > xMax:
-            self.__showMessage__("range start must be less than or equal to range end")
+        if xMin >= xMax:
+            self.__showMessage__("range start must be less than range end")
             return False
 
         try:

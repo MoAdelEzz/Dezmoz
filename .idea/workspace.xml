@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdefb41b-588d-4976-bc8b-ffb7a06ec89c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Backend/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Backend/Server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Backend/equationResolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Backend/equationResolver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Backend/testing/E2ETest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Backend/testing/E2ETest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Backend/tokenizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Backend/tokenizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/UI/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/UI/ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/UI/ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Application/UI/ui.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Validators/FunctionValidator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Validators/FunctionValidator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/__init__.py" afterDir="false" />
-    </list>
+    <list default="true" id="cdefb41b-588d-4976-bc8b-ffb7a06ec89c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +129,7 @@
       <workItem from="1721387305616" duration="7000" />
       <workItem from="1721387325443" duration="18888000" />
       <workItem from="1721464384397" duration="5720000" />
-      <workItem from="1721474294838" duration="306000" />
+      <workItem from="1721474294838" duration="975000" />
     </task>
     <servers />
   </component>

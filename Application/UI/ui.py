@@ -51,7 +51,7 @@ class Ui_MainWindow(object):
         self.functionInput.setMinimumSize(QSize(640, 30))
         self.functionInput.setStyleSheet(u"background-color: #0f0f0f;\n"
 "border-width: 2px;\n"
-"\n"
+"color: white;\n"
 "border-style: outset;\n"
 "border-radius: 10px;\n"
 "border-color: red")
@@ -80,7 +80,7 @@ class Ui_MainWindow(object):
 "border-top: none;\n"
 "border-left:none;\n"
 "border-right:none;\n"
-"\n"
+"color: white;\n"
 "border-width: 2px;\n"
 "border-style: outset")
         self.xMinInput.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -101,7 +101,7 @@ class Ui_MainWindow(object):
 "border-top: none;\n"
 "border-left:none;\n"
 "border-right:none;\n"
-"\n"
+"color: white;\n"
 "border-width: 2px;\n"
 "border-style: outset")
         self.xMaxInput.setAlignment(Qt.AlignmentFlag.AlignCenter)
