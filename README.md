@@ -33,6 +33,8 @@ in Application Folder, run the following command
 | ![X^2](./Readme_rsc/x^2.png) | ![sqrt](./Readme_rsc/sqrt(X).png) |
 |![Log10](Readme_rsc/log10.png)| ![](Readme_rsc/div.png) |
 
+![cmplx](Readme_rsc/complex.png)
+
 # Error Handling Examples
 |||
 |---|---|
