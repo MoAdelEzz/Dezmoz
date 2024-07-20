@@ -43,6 +43,9 @@ class MainWindow(QMainWindow):
     def __submit__(self):
         equation = self.ui.functionInput.text()
 
+        if equation.replace(" ", "") == "":
+            return
+
         errorMessage = self.functionValidator.validate(equation)
         if errorMessage != "":
             self.__showMessage__(errorMessage)
@@ -73,7 +76,7 @@ class MainWindow(QMainWindow):
         try:
             xList, yList = self.server.generatePlot(equation, xMin, xMax)
         except Exception as e:
-            self.__showMessage__(e)
+            self.__showMessage__("Parsing Error")
             return False
 
         self.createPlotCanvas(xList, yList)
@@ -128,6 +131,11 @@ class MainWindow(QMainWindow):
         self.ui.plotButton.clicked.connect(self.__submit__)
 
     def createPlotCanvas(self, x, y):
+        
+        if (len(x) == 0) or len(y) == 0:
+            x.append(0)
+            y.append(0)
+
         if self.canvas is not None:
             self.ui.plotArea.removeWidget(self.canvas)
             self.ui.plotArea.removeWidget(self.toolbar)
