@@ -23,21 +23,21 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(605, 492)
+        MainWindow.resize(991, 665)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.widget = QWidget(self.centralwidget)
         self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(0, 0, 641, 501))
+        self.widget.setGeometry(QRect(0, 0, 991, 661))
         self.widget.setStyleSheet(u"background-color:black;\n"
 "")
         self.widget565 = QWidget(self.widget)
         self.widget565.setObjectName(u"widget565")
-        self.widget565.setGeometry(QRect(0, 0, 601, 781))
+        self.widget565.setGeometry(QRect(0, 0, 991, 781))
         self.widget565.setStyleSheet(u"background-color: black")
         self.groupBox = QGroupBox(self.widget565)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 310, 581, 171))
+        self.groupBox.setGeometry(QRect(10, 500, 981, 161))
         self.verticalLayout = QVBoxLayout(self.groupBox)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.horizontalLayout = QHBoxLayout()
@@ -48,15 +48,14 @@ class Ui_MainWindow(object):
 
         self.functionInput = QLineEdit(self.groupBox)
         self.functionInput.setObjectName(u"functionInput")
-        self.functionInput.setMinimumSize(QSize(434, 30))
+        self.functionInput.setMinimumSize(QSize(640, 30))
         self.functionInput.setStyleSheet(u"background-color: #0f0f0f;\n"
-"color: white;\n"
 "border-width: 2px;\n"
 "\n"
 "border-style: outset;\n"
 "border-radius: 10px;\n"
 "border-color: red")
-        self.functionInput.setMaxLength(64)
+        self.functionInput.setMaxLength(256)
         self.functionInput.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.functionInput.setReadOnly(False)
 
@@ -81,7 +80,7 @@ class Ui_MainWindow(object):
 "border-top: none;\n"
 "border-left:none;\n"
 "border-right:none;\n"
-"color:white;\n"
+"\n"
 "border-width: 2px;\n"
 "border-style: outset")
         self.xMinInput.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -102,7 +101,7 @@ class Ui_MainWindow(object):
 "border-top: none;\n"
 "border-left:none;\n"
 "border-right:none;\n"
-"color:white;\n"
+"\n"
 "border-width: 2px;\n"
 "border-style: outset")
         self.xMaxInput.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -116,7 +115,6 @@ class Ui_MainWindow(object):
         self.plotButton = QPushButton(self.groupBox)
         self.plotButton.setObjectName(u"plotButton")
         self.plotButton.setMinimumSize(QSize(87, 0))
-        self.plotButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.plotButton.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 255, 100, 255), stop:1 rgba(255, 0, 0, 255));\n"
 "\n"
 "border-color:red;\n"
@@ -139,13 +137,13 @@ class Ui_MainWindow(object):
 
         self.label_2 = QLabel(self.widget565)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(260, 0, 81, 70))
+        self.label_2.setGeometry(QRect(470, 0, 81, 70))
         self.label_2.setStyleSheet(u"color:white;\n"
 "font-weight: bold;\n"
 "font-size: 20px")
         self.verticalLayoutWidget = QWidget(self.widget565)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(20, 60, 571, 241))
+        self.verticalLayoutWidget.setGeometry(QRect(20, 60, 961, 431))
         self.plotArea = QVBoxLayout(self.verticalLayoutWidget)
         self.plotArea.setObjectName(u"plotArea")
         self.plotArea.setContentsMargins(0, 0, 0, 0)
@@ -159,11 +157,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.groupBox.setTitle("")
-        self.functionInput.setText(QCoreApplication.translate("MainWindow", u"X^2 * sqrt(X)", None))
+        self.functionInput.setText(QCoreApplication.translate("MainWindow", u"X + X^2 + 2X - 4 * 1 + log10(X) + sqrt(X * 0)", None))
         self.functionInput.setPlaceholderText(QCoreApplication.translate("MainWindow", u"f(x)", None))
-        self.xMinInput.setText(QCoreApplication.translate("MainWindow", u"-20", None))
+        self.xMinInput.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>&lt; X &lt;</p></body></html>", None))
-        self.xMaxInput.setText(QCoreApplication.translate("MainWindow", u"20", None))
+        self.xMaxInput.setText(QCoreApplication.translate("MainWindow", u"100", None))
         self.plotButton.setText(QCoreApplication.translate("MainWindow", u"Plot", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Dezmoz</p></body></html>", None))
     # retranslateUi

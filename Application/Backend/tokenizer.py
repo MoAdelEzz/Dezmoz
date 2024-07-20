@@ -67,15 +67,34 @@ class Tokenizer:
         return result
 
     def __tokenizeDigits__(self, equation: str):
-        pattern = re.compile(r";\d+;")
+        pattern = re.compile(r"\d+(\.\d+)?")
+
+        i = 0
+        result = ""
+        while i < len(equation):
+            if equation[i] == ".":
+                if i == 0:
+                    result += '0' + equation[i]
+                elif i == len(equation) - 1:
+                    result += equation[i]
+                elif equation[i - 1].isdigit() and equation[i + 1].isdigit():
+                    result += equation[i]
+                elif equation[i + 1].isdigit():
+                    result += '0' + equation[i]
+                else:
+                    result += equation[i] + '0'
+            else:
+                result += equation[i]
+            i += 1
+        equation = result
 
         def replace_non_matching(match):
             number = match.group()
-            if not pattern.match(number):
+            if pattern.match(number):
                 return f"DG;{number};"
             return number
 
-        result = re.sub(r'\d+', replace_non_matching, equation)
+        result = re.sub(pattern, replace_non_matching, equation)
         result = result.replace("-", "+DG;0;-")
 
         return result

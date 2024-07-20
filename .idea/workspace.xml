@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdefb41b-588d-4976-bc8b-ffb7a06ec89c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/FunctionPlotter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Backend/testing/E2ETest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Validators/FunctionValidator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Backend/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Backend/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Backend/equationResolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Backend/equationResolver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Backend/testing/E2ETest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Backend/testing/E2ETest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Backend/tokenizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Backend/tokenizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/UI/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/UI/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/UI/ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Application/UI/ui.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Validators/FunctionValidator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Validators/FunctionValidator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,28 +42,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.E2ETest.executor": "Run",
-    "Python.FunctionValidator.executor": "Run",
-    "Python.Main.executor": "Run",
-    "Python.Server.executor": "Run",
-    "Python.Tester.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.equationResolver.executor": "Run",
-    "Python.ui.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Dev/FunctionPlotter/Application/__init__.py",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.E2ETest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FunctionValidator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Tester.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.equationResolver.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ui.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Dev/Dezmoz/Application/__init__.py&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python">
       <module name="FunctionPlotter" />
@@ -138,15 +139,30 @@
       <workItem from="1721375620470" duration="2807000" />
       <workItem from="1721387305616" duration="7000" />
       <workItem from="1721387325443" duration="18888000" />
+      <workItem from="1721464384397" duration="5720000" />
+      <workItem from="1721474294838" duration="306000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Application/Validators/FunctionValidator.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FunctionPlotter$Server.coverage" NAME="Server Coverage Results" MODIFIED="1721406756740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Application/Backend" />
+    <SUITE FILE_PATH="coverage/Dezmoz$Main.coverage" NAME="Main Coverage Results" MODIFIED="1721474186360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/FunctionPlotter$FunctionValidator.coverage" NAME="FunctionValidator Coverage Results" MODIFIED="1721391875989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Application/Validators" />
+    <SUITE FILE_PATH="coverage/Dezmoz$Tester.coverage" NAME="Tester Coverage Results" MODIFIED="1721467431398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/FunctionPlotter$E2ETest.coverage" NAME="E2ETest Coverage Results" MODIFIED="1721404194590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Application/Backend/testing" />
     <SUITE FILE_PATH="coverage/FunctionPlotter$ui.coverage" NAME="ui Coverage Results" MODIFIED="1721390097945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Application/UI" />
     <SUITE FILE_PATH="coverage/FunctionPlotter$equationResolver.coverage" NAME="equationResolver Coverage Results" MODIFIED="1721403761145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Application/Backend" />

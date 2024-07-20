@@ -1,4 +1,7 @@
 import math
+
+import numpy as np
+
 from Backend.stringUtils import formatNumber, findFirstOccurence, findLastOccurence, tokenizedStringToFloat
 
 
@@ -42,14 +45,22 @@ class EquationResolver:
             answer = operand[3: -1]
 
         if answer is None:
-            raise Exception("Unknown operand")
+            raise Exception("Unknown operand", operand)
 
         return tokenizedStringToFloat(answer)
 
     def __generalResolver__(self, equation: str, operator: str):
 
         def executePower(op1: float, op2: float):
-            return op1 ** op2
+            try:
+                return op1 ** op2
+            except OverflowError:
+                print(op1, op2)
+                if op2 % 2 == 0:
+                    return 1e100
+                else:
+                    return np.sign(op1) * 1e100
+
 
         def executeAddition(op1: float, op2: float):
             return op1 + op2

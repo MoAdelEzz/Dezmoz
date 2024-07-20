@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>605</width>
-    <height>492</height>
+    <width>991</width>
+    <height>665</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,14 +19,12 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>641</width>
-      <height>501</height>
+      <width>991</width>
+      <height>661</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color:black;
-display:flex;
-flex-direction: column;
 </string>
     </property>
     <widget class="QWidget" name="widget565" native="true">
@@ -34,7 +32,7 @@ flex-direction: column;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>601</width>
+       <width>991</width>
        <height>781</height>
       </rect>
      </property>
@@ -45,9 +43,9 @@ flex-direction: column;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>310</y>
-        <width>581</width>
-        <height>171</height>
+        <y>500</y>
+        <width>981</width>
+        <height>161</height>
        </rect>
       </property>
       <property name="title">
@@ -73,7 +71,7 @@ flex-direction: column;
           <widget class="QLineEdit" name="functionInput">
            <property name="minimumSize">
             <size>
-             <width>434</width>
+             <width>640</width>
              <height>30</height>
             </size>
            </property>
@@ -86,10 +84,10 @@ border-radius: 10px;
 border-color: red</string>
            </property>
            <property name="text">
-            <string/>
+            <string>X + X^2 + 2X - 4 * 1 + log10(X) + sqrt(X * 0)</string>
            </property>
            <property name="maxLength">
-            <number>20</number>
+            <number>256</number>
            </property>
            <property name="alignment">
             <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -143,6 +141,9 @@ border-right:none;
 border-width: 2px;
 border-style: outset</string>
            </property>
+           <property name="text">
+            <string>0</string>
+           </property>
            <property name="alignment">
             <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
@@ -170,6 +171,9 @@ border-right:none;
 
 border-width: 2px;
 border-style: outset</string>
+           </property>
+           <property name="text">
+            <string>100</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -234,7 +238,7 @@ font-weight: bold;</string>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>260</x>
+        <x>470</x>
         <y>0</y>
         <width>81</width>
         <height>70</height>
@@ -254,8 +258,8 @@ font-size: 20px</string>
        <rect>
         <x>20</x>
         <y>60</y>
-        <width>571</width>
-        <height>241</height>
+        <width>961</width>
+        <height>431</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="plotArea"/>

@@ -1,8 +1,6 @@
 from Backend.equationResolver import EquationResolver, LogarithmicError, RootError
 from Backend.stringUtils import tokenizedStringToFloat
 from Backend.tokenizer import Tokenizer
-import matplotlib.pyplot as plt
-
 
 
 class Server:
@@ -28,7 +26,7 @@ class Server:
     def generatePlot(self, equation: str = "", x_min: float = 0.0, x_max: float = 10.0, steps: int = 10000):
         self.setEquation(equation)
         self.processEquation()
-
+        
         stepSize = (x_max - x_min) / steps
         xList = []
         yList = []

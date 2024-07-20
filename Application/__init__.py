@@ -1,13 +1,13 @@
 import sys
 
+import numpy as np
 from PySide6.QtWidgets import QMessageBox
-from PySide6.QtGui import QIcon
 from matplotlib.figure import Figure
-
 from Backend.Server import Server
 from UI.ui import *
 from Validators.FunctionValidator import FunctionValidator
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
+
 
 class CustomToolbar(NavigationToolbar):
     def __init__(self, *args, **kwargs):
@@ -70,8 +70,14 @@ class MainWindow(QMainWindow):
             self.__showMessage__("range start must be less than or equal to range end")
             return False
 
-        xList, yList = self.server.generatePlot(equation, xMin, xMax)
+        try:
+            xList, yList = self.server.generatePlot(equation, xMin, xMax)
+        except Exception as e:
+            self.__showMessage__(e)
+            return False
+
         self.createPlotCanvas(xList, yList)
+        return True
 
     def zoom(self,event):
         # Get the current x and y limits
@@ -97,14 +103,15 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
 
-        width = 605
-        height = 492
+        width = 991
+        height = 665
         # setting  the fixed size of window
         self.setFixedSize(width, height)
         
 
         self.toolbar = None
         self.canvas = None
+        self.limitsMargin = [1, 10]
         self.ax = None
         self.functionValidator = FunctionValidator()
         self.server = Server()
@@ -114,7 +121,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Dezmoz")
         self.setWindowIcon(QIcon("./UI/rsc/icon.png"))
 
-        self.createPlotCanvas([],[])
+        self.createPlotCanvas([0], [0])
         self.invokeListeners()
 
     def invokeListeners(self):
@@ -126,25 +133,24 @@ class MainWindow(QMainWindow):
             self.ui.plotArea.removeWidget(self.toolbar)
 
         fig = Figure(facecolor="silver", edgecolor="red", dpi=100)
-        self.ax = fig.add_subplot()
+        self.ax = fig.add_subplot(1, 1, 1)
 
         self.ax.set_facecolor('red')
         self.ax.plot(x, y, color="#000000")
         self.ax.grid()
-        self.ax.set_xlim([-20, 20])
-        self.ax.set_ylim([-20, 20])
-        # Set axis color to white
-        self.ax.spines['bottom'].set_color('white')
-        self.ax.spines['left'].set_color('white')
-        self.ax.spines['top'].set_color('white')
-        self.ax.spines['right'].set_color('white')
+
+        first_quartile = np.percentile(y, 25)
+        third_quartile = np.percentile(y, 75)
+
+        self.ax.set_xlim([x[0] - self.limitsMargin[0], x[-1] + self.limitsMargin[0]])
+        self.ax.set_ylim([first_quartile - self.limitsMargin[1], third_quartile + self.limitsMargin[1]])
+
         self.ax.xaxis.label.set_color('white')
         self.ax.yaxis.label.set_color('white')
         self.ax.title.set_color('white')
 
         self.canvas = FigureCanvasQTAgg(fig)
         self.toolbar = CustomToolbar(self.canvas, self)
-        self.toolbar
         self.ui.plotArea.addWidget(self.toolbar)
         self.ui.plotArea.addWidget(self.canvas)
 
